@@ -10,6 +10,11 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<Home />} />
+        <Route path="/work" element={<Mijisoft />} />
+        <Route path="/projects" element={<Mijisoft />} />
+        <Route path="/skills" element={<Mijisoft />} />
+        <Route path="/contact" element={<Mijisoft />} />
         <Route path="/mijisoft" element={<Mijisoft />} />
       </Routes>
     </div>

@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import markImg from '../../mark.png';
 import './Header.css';
 
@@ -9,6 +9,9 @@ function LogoMark() {
 }
 
 export default function Header() {
+  const { pathname } = useLocation();
+  const isHome = pathname === '/';
+
   return (
     <header className="header">
       <div className="header-inner">
@@ -16,12 +19,28 @@ export default function Header() {
           <LogoMark />
         </div>
         <p className="tagline">
-          Step Into Mijisoft Studio — Your Gateway to Limitless Digital Possibilities
+
+          {isHome ? (<>
+            Welcome to Mijisoft Studio • Exploring the Unknown, Creating the Future with
+            <a href="/mijisoft">mijisoft</a>
+          </>) : (<>
+            Step Into Mijisoft Studio — Your Gateway to Limitless Digital Possibilities
+          </>)}
         </p>
-        <nav className="nav">
-          <Link to="/">Home</Link>
-          <Link to="/mijisoft">Mijisoft</Link>
-        </nav>
+
+        {isHome ? (
+          <></>
+        ) : (
+          <nav className="nav">
+            <NavLink to="/">Home</NavLink>
+            <NavLink to="/mijisoft#about">About</NavLink>
+            <NavLink to="/mijisoft#work">Work</NavLink>
+            <NavLink to="/mijisoft#projects">Projects</NavLink>
+            <NavLink to="/mijisoft#skills">Skills</NavLink>
+            <NavLink to="/mijisoft#contact">Contact</NavLink>
+          </nav>
+        )}
+
       </div>
     </header>
   );
