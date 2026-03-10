@@ -1,0 +1,86 @@
+.header {
+  border-bottom: 1px solid var(--color-border);
+  background: #121a2f;
+}
+
+.header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 1.5rem 1.5rem;
+}
+
+.brand {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.logo-mark {
+  flex-shrink: 0;
+  width: 144px;
+  height: auto;
+  display: block;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.brand-name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.brand-studio {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-top: 0.15rem;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  color: var(--color-muted);
+  margin: 0.75rem 0 0;
+  max-width: auto;
+} 
+
+.nav {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.nav a {
+  color: var(--color-muted);
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.nav a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (max-width: 640px) {
+  .header-inner {
+    padding: 1.5rem 1rem;
+  }
+  .brand-name {
+    font-size: 2rem;
+  }
+  .logo-mark {
+    width: 112px;
+    height: auto;
+  }
+}

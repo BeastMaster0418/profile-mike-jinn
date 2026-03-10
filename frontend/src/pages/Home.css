@@ -1,0 +1,7 @@
+.section {
+  margin-bottom: var(--section-gap);
+}
+
+.collaboration p:first-of-type {
+  margin-bottom: 0.5rem;
+}
